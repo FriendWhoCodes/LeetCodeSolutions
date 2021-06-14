@@ -46,7 +46,9 @@ class Solution:
                 return [i, dic.get(comp)]
         
                 
-            
+            '''
+            This can be further optimized by doing the check and update in one go.
+            '''
         
         
         
