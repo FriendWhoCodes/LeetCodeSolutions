@@ -1,18 +1,18 @@
-import math
 class Solution:
     def isArmstrong(self, n: int) -> bool:
         
-        cube_sum = temp = power = 0
-        num1 = num2 = n
+        power = total = 0
+        temp1 = temp2 = n
         
-        while num1 != 0:
+        while temp1 != 0:
             power += 1
-            num1 = num1 // 10
-        
-        while num2 != 0: 
-            temp =  num2 % 10
-            cube_sum += temp ** power
-            num2 = num2 // 10
-        if n == cube_sum:
-            return True
+            temp1 = temp1 // 10
             
+        while temp2 !=0:
+            digit =  temp2 % 10
+            total += digit ** power
+            temp2 = temp2 // 10
+        
+        if total == n:
+            return True
+        
