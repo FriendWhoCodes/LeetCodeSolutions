@@ -24,7 +24,7 @@ class Solution:
 
 
 
-# Bruteforce Method, time limit excceeds on LeetCode:
+# Bruteforce Method, time limit excceeds on LeetCode, for 1 test case:
 
 
 # class Solution:
