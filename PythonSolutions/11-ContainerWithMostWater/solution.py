@@ -38,7 +38,37 @@ class Solution:
         return max_area
                 
         
+# Same Solution with some print statements.
+# Don't submit this, else output limit would be exceeded:
 
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        n = len(height)
+        if n <=1:
+            return 0
+        
+        max_area = 0
+        i, j = 0, n - 1
+        
+        print("At the beginning")
+        print("i is {}, j is {} and max_area is {}".format(i, j, max_area))
+        
+        while i < j:
+            h = min(height[i], height[j])
+            w = j - i
+            print("Inside the loop")
+            print("i is {}, j is {}".format(i, j))
+            area = h * w
+            max_area = max(area, max_area)
+            print("height is {}, width is {} and max_area is {}".format(h, w, max_area))
+            if height[i] < height[j]:
+                i += 1
+            else:
+                j -= 1
+                   
+        return max_area
+                
+        
 
 
 # Bruteforce solution, Time Limit Exceeded
