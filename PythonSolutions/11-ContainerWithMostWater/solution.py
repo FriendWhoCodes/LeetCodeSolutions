@@ -5,6 +5,7 @@
 
 # Bruteforce solution, Time Limit Exceeded
 # Passes only 49/60 test cases on LC
+# Time Complexity = O(n^2) and Space: O(1)
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         n = len(height)
@@ -18,9 +19,8 @@ class Solution:
                 w = j - i
                 
                 area = h * w
+                max_area = max(area, max_area)
                 
-                if area > max_area:
-                    max_area = h*w
         return max_area
                 
         
