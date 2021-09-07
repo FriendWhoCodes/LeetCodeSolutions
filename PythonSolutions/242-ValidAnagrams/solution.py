@@ -92,7 +92,7 @@ class Solution:
 
 
 
-# Bad python sorted function based solution, can't use in interviews, unless implement own sort function
+# Python sorted function based solution, can't use in interviews, unless implement own sort function
 # O(nlogn) since sorted uses quick sort internally
 
 class Solution:
