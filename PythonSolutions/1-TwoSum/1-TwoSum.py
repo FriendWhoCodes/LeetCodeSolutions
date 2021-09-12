@@ -46,6 +46,23 @@ class Solution:
             '''
             This can be further optimized by doing the check and update in one go.
             '''
+     # Same alternatively:
+    
+    class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        
+        freq = {}
+        
+        for i in range(len(nums)):
+            freq[nums[i]] = i
+        
+        for i in range(len(nums)):
+            diff = target - nums[i]
+            
+            if diff in freq and freq[diff] != i:
+                return [i+1, freq[diff] + 1]
+        
+        return [-1, -1]
         
         
         
