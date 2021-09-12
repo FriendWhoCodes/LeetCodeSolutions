@@ -1,4 +1,6 @@
-# Question: Return the third maximum element in the array if it exists, else return the maximum element in the array
+# https://leetcode.com/problems/third-maximum-number/
+
+# Problem: Return the third maximum element in the array if it exists, else return the maximum element in the array
 
 
 # O(nlogn) solution
