@@ -10,29 +10,20 @@ class Solution:
         if n <= 2:
             return 0
         
-        
         nums = {}
         
         for i in range(2, int(n**0.5) + 1):           # from 2 to square root of n
             if i not in nums:
                 for multiple in range(i*i, n, i):     # Need to understand this loop better
                     nums[multiple] = 1
-        print(nums)
-        print(len(nums))
-        
+
         # Out of n numbers, len(nums) would give count of all numbers that are multiple of some number
         # So we remove that count from n to get remaining numbers, which must be primes
         # We also remove two for 1 and n itself, finally we return
         return n - len(nums) - 2
         
         
-
-
-
-
-
-
-
+# Bruteforce Solution (slightly optimized to divide and check only till square root of a number)        
 # Following is a O(n^1.5) solution and it fails with TLE for 2 test cases
 
 class Solution:
