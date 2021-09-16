@@ -1,5 +1,8 @@
 # https://leetcode.com/problems/baseball-game/
 
+# The trick here is the negative number that you'd face in the ops array and how to check if it is negative or not.
+# string.isdigit() does not work for negative numbers or float, so I implemented mine in a try except block.
+# Used try except because otherwise int would give an error
 
 class Solution:
     def calPoints(self, ops: List[str]) -> int:
