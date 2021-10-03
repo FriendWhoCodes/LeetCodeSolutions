@@ -1,14 +1,13 @@
 # https://leetcode.com/problems/richest-customer-wealth/
-
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
         
-        max_wealth = 0
-        
+        max_sum = 0
         for row in accounts:
-            if sum(row) > max_wealth:
-                max_wealth = sum(row)
-        return max_wealth
+            max_sum = max(sum(row), max_sum)
+        
+        return max_sum
+            
         
                 
                 
