@@ -17,8 +17,46 @@ class Solution:
             return True
         else:
             return False
-            
+ 
+ # My most recent solution that passed all test cases
+ class Solution:
+    def validMountainArray(self, arr: List[int]) -> bool:
         
+        n = len(arr)
+        
+        if n < 3:
+            return False
+        
+        i = 0        
+        maximum = max(arr)
+        
+        # Check first half of the array is strictly increasing
+
+        while arr[i] < maximum and i < n - 1:
+            if arr[i] < arr[i+1]:
+                i += 1
+                continue
+            else:
+                return False
+        
+        # If maximum is the last index of the array, then there is no downward slope
+        # If maximum is the first index of the array, then there is no upward slope
+        # So not a mountain array, so return False
+        if i == n - 1 or i == 0:
+            return False
+        
+        # Check second half of the array is strictly decreasing
+        j = i
+        while j < n - 1:
+            if arr[j] > arr[j+1]:
+                j += 1
+                continue
+            else:
+                return False
+        
+        return True
+                
+                   
         
         
         
