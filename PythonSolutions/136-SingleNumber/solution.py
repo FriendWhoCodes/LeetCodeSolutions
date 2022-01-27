@@ -1,11 +1,12 @@
+# 136. Single Number
 # https://leetcode.com/problems/single-number/
 
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         
-        num = 0
-        for i in nums:
-            num = num ^ i
+        result = 0
+        for num in nums:
+            result = num ^ result
         
-        return num
-            
+        return result
+        
