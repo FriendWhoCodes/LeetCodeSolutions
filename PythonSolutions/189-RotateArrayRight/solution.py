@@ -27,7 +27,34 @@ class Solution:
         reverse(k, n - 1)
         print(nums)
         
-            
+       
+    
+        # Alternate solution
+        # O(n*k) time and O(1) space complexity
+        
+        '''
+        class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        while k:
+            nums = self.right_rotate(nums)
+            k -= 1
+        # print(nums)
+    
+    def right_rotate(self, arr):
+        n = len(arr)
+        temp = arr[n-1]
+        
+        for i in range(n-2,-1,-1):
+            arr[i+1] = arr[i]
+        # print(arr)
+        
+        arr[0] = temp
+        
+        return arr
+        '''
         
         
         # Rotates the array to the right:
