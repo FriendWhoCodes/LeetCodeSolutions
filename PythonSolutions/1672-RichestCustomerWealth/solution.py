@@ -2,11 +2,13 @@
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
         
-        max_sum = 0
-        for row in accounts:
-            max_sum = max(sum(row), max_sum)
+        max_wealth = 0
         
-        return max_sum
+        for wealth in accounts:
+            total = sum(wealth)
+            max_wealth = max(total, max_wealth)
+        
+        return max_wealth
             
         
                 
