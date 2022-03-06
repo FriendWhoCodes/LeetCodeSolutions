@@ -10,7 +10,23 @@ class Solution:
         
         return max_wealth
             
+'''
+# In latest attempt:
+
+class Solution:
+    def maximumWealth(self, accounts: List[List[int]]) -> int:
         
+        cur_wealth = 0
+        max_wealth = 0
+        
+        for account in accounts:
+            cur_wealth = sum(account)
+            max_wealth = max(cur_wealth, max_wealth)
+        
+        return max_wealth
+        
+
+'''
                 
                 
         
